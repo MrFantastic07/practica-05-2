@@ -1,13 +1,18 @@
 # Menú de operaciones
-print("Seleccione la operación:")
-print("1. Suma")
-print("2. Producto")
-print("3. Division")
-print("4. Factorial")
-print("5. Tablas de multiplicar")
-print("6. Calculo de cuadrado y cubo")
-print("7. Promedio")
-print("8. Maximo y minimo")
+menu = """
+Bienvenido/a a la práctica 5. 
+Seleccione la operación que deseas ejecutar:
+1. Suma
+2. Producto
+3. Division
+4. Factorial
+5. Tablas de multiplicar
+6. Calculo de cuadrado y cubo
+7. Promedio
+8. Maximo y minimo
+
+"""
+print(menu)
 
 # Solicitar al usuario la elección
 opcion = int(input("Ingrese el número de la operación deseada: "))
@@ -21,7 +26,11 @@ elif opcion == 2:
     pass
 elif opcion == 3:
     # Código para la división
-    pass
+    N = int(input("Ingresa el dividendo: "))
+    A = int(input("Ingresa el divisor: "))
+    div = N / A
+    print("La división es: ", div)
+
 elif opcion == 4:
     # Código para el factorial
     pass
@@ -36,7 +45,22 @@ elif opcion == 6:
     pass
 elif opcion == 7:
     # Código para el promedio
-    pass
+    s = 0 # Asignamos el valor 0 al contador s
+    x = int(input("Número de elementos en la serie: "))
+
+    if x > 0:
+       for n in range(x):
+           numbers = float(input("Ingresa el número (-1 para detener): "))
+           if numbers == -1:
+               break  # Sale del bucle si se ingresa -1
+           s += numbers
+           media = s / (n + 1)  # Calcula la media hasta el número actual
+        
+       print("El promedio es: ", media)
+    else:
+       print("Error en la secuencia")
+       exit()
+       
 elif opcion == 8:
     # Código para máximo y mínimo
     pass
