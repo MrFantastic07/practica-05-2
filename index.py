@@ -54,7 +54,13 @@ elif opcion == 3:
 
 elif opcion == 4:
     # Código para el factorial
-    pass
+    N = int(input("Ingresa el número: "))
+    F = 1
+    x = 1
+    while (x <= N):
+        F = F * x
+        x = x + 1
+    print ("El factorial de ", N," es ", F)
 elif opcion == 5:
     # Código para las tablas de multiplicar
     numero_tabla = int(input("Ingrese el número de tabla que desea imprimir: "))
@@ -63,7 +69,11 @@ elif opcion == 5:
         print(f"{numero_tabla} x {i} = {resultado}")
 elif opcion == 6:
     # Código para el cálculo de cuadrado y cubo
-    pass
+    N=int(input("\nIntroduzca un número: "))
+    N2=N**2
+    N3=N**3
+    print(N, " al cuadrado es: ", N2)
+    print(N, " al  cubo es: ", N3)
 elif opcion == 7:
     # Código para el promedio
     s = 0 # Asignamos el valor 0 al contador s
@@ -84,7 +94,19 @@ elif opcion == 7:
        
 elif opcion == 8:
     # Código para máximo y mínimo
-    pass
+    cantidad_numeros = int(input("Ingrese la cantidad de números enteros que desea introducir: "))
+    
+    if cantidad_numeros <= 0:
+        print("Ingrese un número mayor que cero.")
+    else:
+        numeros = [int(input(f"Ingrese el número {i + 1}: ")) for i in range(cantidad_numeros)]
+        maximo = max(numeros)
+        minimo = min(numeros)
+
+        print(f"\nValores ingresados: {numeros}")
+        print(f"Total de valores: {cantidad_numeros}")
+        print(f"Valor máximo: {maximo}")
+        print(f"Valor mínimo: {minimo}")
 else:
     print("Opción no válida. Por favor, elija una opción del 1 al 8.")
 
