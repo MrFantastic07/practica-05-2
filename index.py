@@ -20,10 +20,31 @@ opcion = int(input("Ingrese el número de la operación deseada: "))
 # Realizar la operación seleccionada
 if opcion == 1:
     # Código para la suma
-    pass
+    def suma(a, b):
+        resultado = a + b
+        return resultado
+
+    # Solicitar al usuario que ingrese dos números
+    a = float(input("Ingresa el primer número: "))
+    b = float(input("Ingresa el segundo número: "))
+
+    # Llamar a la función suma y mostrar el resultado
+    resultado = suma(a, b)
+    print(f"La suma de {a} y {b} es: {resultado}")
+
 elif opcion == 2:
-    # Código para el producto
-    pass
+    # Código para la multiplicación
+    def multiplicacion(a, b):
+        resultado = a * b
+        return resultado
+
+    # Solicitar al usuario que ingrese dos números
+    a = float(input("Ingresa el primer número: "))
+    b = float(input("Ingresa el segundo número: "))
+
+    # Llamar a la función suma y mostrar el resultado
+    resultado = multiplicacion(a, b)
+    print(f"La multiplicación de {a} y {b} es: {resultado}")
 elif opcion == 3:
     # Código para la división
     N = int(input("Ingresa el dividendo: "))
